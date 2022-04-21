@@ -1,0 +1,13 @@
+.card {
+  background-color: rgb(226, 177, 15);
+  border-radius: 5%;
+  border: solid #bdbdbd;
+  border-width: 3px;
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  padding: 7px;
+  border-radius: 10%;
+}
