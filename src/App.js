@@ -1,21 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
-import ReactDOM from "react-dom";
-import { Card } from "./components/Card";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Profil from "./views/Profil/profil";
+import DisplayPage from "./views/Cards/Display";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Card
-          imgSrc="https://static.hitek.fr/img/actualite/ill_m/677768601/2438690.jpeg"
-          cardPower="7"
-        />
-        <Card
-          imgSrc="https://static.hitek.fr/img/actualite/ill_m/677768601/2438690.jpeg"
-          cardPower="4"
-        />
+        <Router>
+          <Routes>
+            <Route path="/profil/:id" element={<Profil />} />
+            <Route path="/cards" element={<DisplayPage />} />
+          </Routes>
+        </Router>
       </header>
     </div>
   );
