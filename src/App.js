@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Profil from "./views/Profil/profil";
 import DisplayPage from "./views/Cards/Display";
 import Collection from "./views/Collection/Display";
+import Signup from "./views/auth/signup";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/profil/:id" element={<Profil />} />
             <Route path="/profil/:id/collection" element={<Collection />} />
             <Route path="/cards" element={<DisplayPage />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </Router>
       </header>
