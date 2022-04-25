@@ -1,0 +1,14 @@
+.deck {
+    background-color: rgb(66, 64, 64);
+    border-radius: 5%;
+    border: solid #bdbdbd;
+    border-width: 3px;
+  }
+  
+  .firstCard {
+    width: 200px;
+    height: 200px;
+    padding: 7px;
+    border-radius: 10%;
+  }
+  
