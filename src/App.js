@@ -4,6 +4,7 @@ import Profil from "./views/Profil/profil";
 import DisplayPage from "./views/Cards/Display";
 import Collection from "./views/Collection/Display";
 import Signup from "./views/auth/signup";
+import CreateDeck from "./views/Cards/Form";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/profil/:id/collection" element={<Collection />} />
             <Route path="/cards" element={<DisplayPage />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/create" element={<CreateDeck />} />
           </Routes>
         </Router>
       </header>
