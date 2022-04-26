@@ -5,7 +5,7 @@ import DisplayPage from "./views/Cards/Display";
 import Collection from "./views/Collection/Display";
 import Signup from "./views/auth/signup";
 import CreateDeck from "./views/Cards/Form";
-import LoginPage from "./views/Login/Login";
+import LoginPage from "./views/auth/Login";
 
 function App() {
   return (
