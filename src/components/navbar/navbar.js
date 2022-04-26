@@ -7,7 +7,6 @@ export function Navbar(setConnected) {
 
   function disconnect() {
     navigate("/");
-    setConnected(false);
     localStorage.removeItem("jwt");
   }
 
