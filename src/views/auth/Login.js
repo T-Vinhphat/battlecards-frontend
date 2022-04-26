@@ -1,13 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-function LoginPage(setConnected) {
+function LoginPage() {
   const [body, setBody] = useState({
     email: "",
     password: "",
   });
-
-  const navigate = useNavigate();
 
   function updateBody(key, value) {
     setBody({ ...body, [key]: value });
@@ -20,16 +17,9 @@ function LoginPage(setConnected) {
 
   async function HandleSubmitLogin(event) {
     event.preventDefault();
-    const submit = await fetch("http://localhost:1337/login", {
+    fetch("http://localhost:1337/login", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
     });
-    if (!submit.ok) {
-      alert("Erreur lors de la connexion");
-    } else {
-      await navigate("/profil/:id");
-    }
   }
 
   return (
