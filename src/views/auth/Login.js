@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function LoginPage() {
+function LoginPage(setConnected) {
   const [body, setBody] = useState({
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   function updateBody(key, value) {
     setBody({ ...body, [key]: value });
@@ -18,16 +21,16 @@ function LoginPage() {
   async function handleSubmitLogin(event) {
     event.preventDefault();
     console.log(body);
-    const submit = await fetch("http://localhost:1337/login", {
+    fetch("http://localhost:1337/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
-    });
-    if (!submit.ok) {
-      alert("La connexion à échoué");
-    } else {
-      alert("connexion réussi");
-    }
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        localStorage.setItem("jwt", result.jwt);
+        navigate("/cards");
+      });
   }
 
   return (
