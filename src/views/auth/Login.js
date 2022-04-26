@@ -18,15 +18,15 @@ function LoginPage() {
   async function handleSubmitLogin(event) {
     event.preventDefault();
     console.log(body);
-    const response = await fetch("http://localhost:1337/login", {
+    const submit = await fetch("http://localhost:1337/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    if (!response.ok) {
+    if (!submit.ok) {
       alert("Connexion échoué");
     } else {
-      alert("Connexion réussi");
+      alert("connexion réussi");
     }
   }
 
