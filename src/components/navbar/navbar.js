@@ -8,6 +8,7 @@ export function Navbar(setConnected) {
   function disconnect() {
     navigate("/");
     localStorage.removeItem("jwt");
+    alert("Vous êtes déconnecté");
   }
 
   return (
