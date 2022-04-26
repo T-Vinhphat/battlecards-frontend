@@ -6,6 +6,7 @@ function Accueil() {
   return (
     <div>
       <div>
+        <h1>Battle Cards</h1>
         <button
           onClick={() => {
             navigate("/login");
