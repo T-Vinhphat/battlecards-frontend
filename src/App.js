@@ -4,7 +4,7 @@ import Profil from "./views/Profil/profil";
 import DisplayPage from "./views/Cards/Display";
 import Collection from "./views/Collection/Display";
 import Signup from "./views/auth/signup";
-import CreateDeck from "./views/Cards/Form";
+import CreateDeck from "./views/Collection/CreateDeck";
 import Accueil from "./views/Accueil/Display";
 import LoginPage from "./views/auth/Login";
 
@@ -21,6 +21,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/create" element={<CreateDeck />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/profil/:id/CreateDeck" element={<CreateDeck />} />
           </Routes>
         </Router>
       </header>

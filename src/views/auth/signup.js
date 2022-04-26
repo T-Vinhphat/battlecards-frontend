@@ -23,7 +23,7 @@ function Signup() {
 
   async function HandleSubmitSignup(event) {
     event.preventDefault();
-    const submit = await fetch("http://localhost:1337/signup", {
+    const submit = await fetch(`${process.env.REACT_APP_API_URL}/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -31,7 +31,7 @@ function Signup() {
     if (!submit.ok) {
       alert("l'inscription ne s'est pas passé comme prévu");
     } else {
-      await navigate("/profil/:id");
+      await navigate(`/profil/${body.pseudo}`);
     }
   }
 
