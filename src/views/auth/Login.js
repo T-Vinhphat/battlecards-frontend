@@ -24,7 +24,7 @@ function LoginPage() {
       body: JSON.stringify(body),
     });
     if (!submit.ok) {
-      alert("Connexion échoué");
+      alert("La connexion à échoué");
     } else {
       alert("connexion réussi");
     }
