@@ -29,9 +29,9 @@ function LoginPage(setConnected) {
       .then((response) => response.json())
       .then((result) => {
         localStorage.setItem("jwt", result.jwt);
-        navigate("/cards");
+        navigate("/profil/:id");
       })
-      .catch((err) => {
+      .catch(() => {
         alert("Connexion échoué");
       });
   }
