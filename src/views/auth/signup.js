@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Signup() {
   const [body, setBody] = useState({
     email: "",
+    pseudo: "",
     password: "",
     confirmPassword: "",
   });
@@ -51,6 +52,10 @@ function Signup() {
         <div>
           <label>adresse mail : </label>
           <input placeholder="adresse@mail.com" type="email" name="email" />
+        </div>
+        <div>
+          <label>pseudo : </label>
+          <input placeholder="pseudo" type="text" name="pseudo" />
         </div>
         <div>
           <label>mot de passe : </label>

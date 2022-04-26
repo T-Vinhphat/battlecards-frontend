@@ -5,6 +5,7 @@ import DisplayPage from "./views/Cards/Display";
 import Collection from "./views/Collection/Display";
 import Signup from "./views/auth/signup";
 import CreateDeck from "./views/Cards/Form";
+import Accueil from "./views/Accueil/Display";
 import LoginPage from "./views/auth/Login";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <header className="App-header">
         <Router>
           <Routes>
+            <Route path="/" element={<Accueil />} />
             <Route path="/profil/:id" element={<Profil />} />
             <Route path="/profil/:id/collection" element={<Collection />} />
             <Route path="/cards" element={<DisplayPage />} />
