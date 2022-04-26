@@ -1,4 +1,4 @@
-function CreateDeck() {
+function AddCard() {
   return (
     <div>
       <header>
@@ -39,4 +39,4 @@ function CreateDeck() {
   );
 }
 
-export default CreateDeck;
+export default AddCard;

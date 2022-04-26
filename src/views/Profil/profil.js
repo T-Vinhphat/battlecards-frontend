@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const defaultStat = { win: null, lose: null };
-
 function Profil() {
-  const [profil, setProfil] = useState({ stat: defaultStat });
+  const [profil, setProfil] = useState({});
 
   let pseudo = useParams();
 
-  console.log(profil.stat);
   useEffect(() => {
-    fetch(`http://localhost:1337/profil/${pseudo.id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/profil/${pseudo.id}`)
       .then((response) => response.json())
       .then((data) => setProfil(data));
   }, []);
@@ -21,10 +18,6 @@ function Profil() {
       <ul>
         <li>Pseudo : {profil.pseudo}</li>
         <li>email : {profil.email}</li>
-        <li>password : {profil.password}</li>
-        <li>
-          stat W/L : {profil.stat.win}/{profil.stat.lose}
-        </li>
       </ul>
     </div>
   );
