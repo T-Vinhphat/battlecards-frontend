@@ -7,12 +7,14 @@ import Signup from "./views/auth/signup";
 import CreateDeck from "./views/Collection/CreateDeck";
 import Accueil from "./views/Accueil/Display";
 import LoginPage from "./views/auth/Login";
+import { Navbar } from "./components/navbar/navbar";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Router>
+          <Navbar></Navbar>
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/profil/:id" element={<Profil />} />
