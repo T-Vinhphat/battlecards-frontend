@@ -6,6 +6,7 @@ import Collection from "./views/Collection/Display";
 import Signup from "./views/auth/signup";
 import CreateDeck from "./views/Cards/Form";
 import Accueil from "./views/Accueil/Display";
+import LoginPage from "./views/auth/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/cards" element={<DisplayPage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/create" element={<CreateDeck />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </Router>
       </header>
