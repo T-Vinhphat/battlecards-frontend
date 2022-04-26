@@ -30,6 +30,9 @@ function LoginPage(setConnected) {
       .then((result) => {
         localStorage.setItem("jwt", result.jwt);
         navigate("/cards");
+      })
+      .catch((err) => {
+        alert("Connexion échoué");
       });
   }
 
